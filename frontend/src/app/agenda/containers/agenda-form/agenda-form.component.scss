@@ -1,0 +1,26 @@
+mat-card {
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: left;
+}
+
+mat-card-content {
+  padding: 20px;
+}
+
+mat-card-actions button {
+  margin: 5px;
+  border-radius: 10px;
+}
+.full-width {
+  width: 100%;
+}
+
+.full-width-data {
+  width: 25%;
+}
+
+.min-width {
+  width: 100%;
+  min-width: 150px;
+}
