@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Agenda } from '../model/agenda';
-import { Observable, first, take } from 'rxjs';
+import { Agenda } from '../shared/model/agenda';
+import { Observable, take } from 'rxjs';
 
 
 @Injectable({

@@ -6,8 +6,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { AgendaService } from '../../service/agenda.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Agenda } from '../../model/agenda';
-import { DefaultError } from '../../model/interfaces';
+import { Agenda } from '../../shared/model/agenda';
+import { DefaultError } from '../../shared/model/interfaces';
 
 
 export const MY_DATE_FORMATS = {

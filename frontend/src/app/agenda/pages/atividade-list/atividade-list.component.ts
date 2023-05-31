@@ -1,5 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
-import  { atividadesMock, Atividade } from '../../model/atividade';
+import  { atividadesMock, Atividade } from '../../shared/model/atividade';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({

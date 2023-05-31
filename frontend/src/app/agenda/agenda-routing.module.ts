@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AgendaComponent } from './containers/agenda/agenda.component';
-import { AgendaFormComponent } from './containers/agenda-form/agenda-form.component';
-import { AgendaResolver } from './guards/agenda.resolver';
+import { AgendaComponent } from './pages/agenda/agenda.component';
+import { AgendaFormComponent } from './pages/agenda-form/agenda-form.component';
+import { AgendaResolver } from './shared/guards/agenda.resolver';
 
 const routes: Routes = [
   { path: '', component: AgendaComponent },

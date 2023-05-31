@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { Agenda } from '../../model/agenda';
+import { Agenda } from '../../shared/model/agenda';
 import { AgendaService } from '../../service/agenda.service';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';

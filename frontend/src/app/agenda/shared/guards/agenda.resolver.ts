@@ -5,7 +5,7 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { AgendaService } from '../service/agenda.service';
+import { AgendaService } from '../../service/agenda.service';
 import { Agenda } from '../model/agenda';
 
 @Injectable({
