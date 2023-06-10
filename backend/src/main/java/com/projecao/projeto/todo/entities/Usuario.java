@@ -38,7 +38,6 @@ public class Usuario implements Serializable{
 	}
 
 	public String getNome() {
-
 		return nome;
 	}
 

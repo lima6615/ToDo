@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +24,7 @@ public class AgendaService {
     private AgendaRepository repository;
 
     @Transactional(readOnly = true)
-    public List<AgendaDTO> findALL(){
+    public List<AgendaDTO> findAll(){
         List<Agenda> entity = repository.findAll();
         return entity.stream().map(x -> new AgendaDTO(x)).toList();
     }
@@ -40,6 +41,10 @@ public class AgendaService {
         Agenda entity = new Agenda();
         entity.setData(LocalDate.parse(dto.getData(), DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")));
         entity.setTitulo(dto.getTitulo());
+        entity.setHorario(LocalTime.parse(dto.getHorario()));
+        entity.setDescricao(dto.getDescricao());
+        entity.setLocal(dto.getLocal());
+        entity.setConcluido(dto.getConcluido());
         Optional<Agenda> result = repository.findByTitulo(dto.getTitulo());
         if(!result.isPresent()){
             entity = repository.save(entity);
@@ -56,6 +61,10 @@ public class AgendaService {
         entity.setId(id);
         entity.setData(LocalDate.parse(dto.getData(), DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")));
         entity.setTitulo(dto.getTitulo());
+        entity.setHorario(LocalTime.parse(dto.getHorario()));
+        entity.setDescricao(dto.getDescricao());
+        entity.setLocal(dto.getLocal());
+        entity.setConcluido(dto.getConcluido());
         entity = repository.save(entity);
         return new AgendaDTO(entity);
     }

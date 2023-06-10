@@ -1,0 +1,69 @@
+<div class="outerContainer">
+
+  <div class="title">
+    <h1>Gestão de Atividade</h1>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="15px">
+    <form
+      [formGroup]="form"
+      class="min-width"
+      (ngSubmit)="onSubmit()"
+      fxLayoutAlign="center space-around"
+    >
+      <div class="content-form">
+        <div style="width: 49%; margin-right: 2%;">
+          <mat-form-field class="full-width">
+            <mat-label>Titulo:</mat-label>
+            <input matInput formControlName="titulo" />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Horario:</mat-label>
+            <input matInput formControlName="horario" />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Local:</mat-label>
+            <input matInput formControlName="local" />
+          </mat-form-field>
+        </div>
+        <mat-form-field style="width: 49%">
+          <mat-label>Descrição:</mat-label>
+          <textarea
+            matInput
+            formControlName="descricao"
+            cdkTextareaAutosize
+            cdkAutosizeMinRows="10"
+            cdkAutosizeMaxRows="10"
+          >
+
+          </textarea>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field class="full-width-data">
+        <mat-label>Data</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="data" />
+        <mat-hint style="color: #696969;">Formato: DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <div class="actions">
+        <button mat-raised-button color="warn" (click)="onVoltar()">
+          Cancelar
+        </button>
+        <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="!form.valid"
+      >
+        Salvar
+      </button>
+      </div>
+    </form>
+  </div>
+</div>

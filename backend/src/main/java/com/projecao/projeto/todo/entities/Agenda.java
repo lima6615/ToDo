@@ -1,6 +1,7 @@
 package com.projecao.projeto.todo.entities;
 
 import jakarta.persistence.*;
+import jakarta.websocket.Encoder;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ public class Agenda implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(columnDefinition = "text")
 	private String titulo;
 	private LocalDate data;
 	private String descricao;

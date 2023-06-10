@@ -1,0 +1,68 @@
+mat-card {
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: left;
+}
+
+mat-checkbox{
+  display: flex;
+}
+
+
+mat-card-content {
+  padding: 20px;
+}
+
+mat-card-actions button {
+  margin: 5px;
+  border-radius: 10px;
+}
+
+
+.full-width-data {
+  display: flex;
+  width: 25%;
+}
+
+.min-width {
+  width: 100%;
+  min-width: 150px;
+}
+
+.outerContainer {
+  padding: 5em;
+
+  .title {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Robolto;
+    margin-bottom: 0.5em;
+    color: #4F4F4F
+  }
+
+  .full-width {
+    display: flex;
+    clear: both;
+    width: 100%;
+  }
+
+  .content-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .actions {
+    display: flex;
+    float: right;
+    margin: 3em auto;
+
+    button {
+      margin-left: 15px;
+    }
+  }
+}
+

@@ -17,7 +17,7 @@ public class AgendaController {
 
     @GetMapping
     public ResponseEntity<List<AgendaDTO>> findAll(){
-       List<AgendaDTO> dto = service.findALL();
+       List<AgendaDTO> dto = service.findAll();
        return ResponseEntity.ok().body(dto);
     }
 

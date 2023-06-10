@@ -15,7 +15,8 @@ public class AgendaDTO implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private String data;
     private String descricao;
-    private LocalTime horario;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm")
+    private String horario;
     private String local;
     private Boolean concluido;
 
@@ -26,6 +27,7 @@ public class AgendaDTO implements Serializable {
         id = entity.getId();
         titulo = entity.getTitulo();
         data = entity.getData().toString();
+        horario = entity.getHorario().toString();
     }
 
     public Long getId() {
@@ -50,5 +52,37 @@ public class AgendaDTO implements Serializable {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
+    public Boolean getConcluido() {
+        return concluido;
+    }
+
+    public void setConcluido(Boolean concluido) {
+        this.concluido = concluido;
     }
 }

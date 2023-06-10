@@ -1,0 +1,41 @@
+.mat-table{
+  overflow: auto;
+  max-height: 600px;
+}
+
+.action-column{
+  flex: 0 0 155px;
+}
+
+.action-column-header{
+  flex: 0 0 90px;
+}
+
+mat-card{
+  max-width: 85%;
+  margin: 2em auto;
+  text-align: left;
+}
+
+.loading-spinner{
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+}
+
+.outlineContainer {
+  padding: 5em;
+
+  .title {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: Robolto;
+    margin-bottom: 0.5em;
+    color: #4F4F4F
+  }
+}
